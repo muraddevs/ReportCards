@@ -1,0 +1,90 @@
+/* ReportCard.css */
+
+.report-card {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: calc(33.333% - 20px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    height: 330px;
+    width: calc(100% - 10px);
+}
+
+.report-card-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-label {
+    font-size: 16px;
+    color: #333;
+}
+
+.checkbox-input {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.other-input {
+    margin-top: auto;
+    width: calc(100% - 10px);
+}
+
+.other-input label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-top: 10px;
+}
+
+.input-text {
+    width: 100%;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+}
+
+/* Flex container for multiple cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Responsive layout for the cards */
+@media (min-width: 1024px) {
+    .report-card {
+        flex-basis: calc(33.333% - 20px); /* 3 cards in a row */
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+    .report-card {
+        flex-basis: calc(50% - 20px); /* 2 cards in a row */
+    }
+}
+
+@media (max-width: 768px) {
+    .report-card {
+        flex-basis: calc(100% - 20px); /* 1 card per row */
+    }
+}
